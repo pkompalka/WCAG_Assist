@@ -1,0 +1,13 @@
+<div>
+  <div class='reviewContainer'>
+    <label id='videoLabel' class='reviewLabel' (click)="handleAnimation()"><b>Watch review, click label to animate background:</b></label>
+    <video controls class='mediaElement'>
+      <source src="assets/video.mp4" type="video/mp4" />
+    </video>
+    <label class='reviewLabel' (click)="handleAnimation()"><b>Listen to expert opinion about it:</b></label>
+    <audio autoplay="autoplay" class='mediaElement'>
+      <source src="assets/audio.mp3" type="audio/mpeg" />
+    </audio>
+    <button class='goBackButton' (click)="onGoBackClick()"></button>
+  </div>
+</div>

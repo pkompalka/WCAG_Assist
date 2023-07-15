@@ -1,0 +1,36 @@
+<div>
+  <div *ngIf="auction">    
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li> / </li>
+      <li><a href="{{breadcrumbLink}}">{{breadcrumbName}}</a></li>
+      <li> / </li>
+      <li>{{auction.title}}</li>
+    </ul>    
+    <title class='title' hidden={{true}}>Auction</title>
+    <div class="auctionContainer">
+      <p class="auctionTitle">{{auction.title}}</p>
+      <div class="auctionImageComponent">
+        <img class="auctionImg" alt="{{auction.title}}" src="{{auction.image}}">
+        <p class="auctionDescription">{{auction.description}}</p>
+      </div>
+    <div class="auctionInformationComponent" >
+      <div class="auctionSubFlexLeft" >
+        <label class="auctionBasicLabel">Auction ends on:</label>
+        <label class="auctionEndDate"><b>{{endDate}}</b></label>
+        <br/>
+        <label class="auctionBasicLabel">Auction created on:</label>
+        <label class="auctionStartDate"><b>{{startDate}}</b></label>
+        <button class="auctionReviewButton" aria-label='Check opinion of this' (click)="onReviewClick()">Check opinion</button>
+      </div>
+      <div class="auctionSubFlexRight" >
+        <div class="auctionPriceDiv">
+          <label class="auctionBasicLabel">Auction price:</label>
+          <label class="auctionPrice"><b>{{auction.price}} PLN</b></label>
+        </div>
+          <button class="auctionBuyButton" aria-label='Buy auction' (click)="onBuyClick()">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

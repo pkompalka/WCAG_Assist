@@ -1,0 +1,36 @@
+<div>
+  <div>
+    <div *ngIf="categoriesList">
+      <button id="animationButton" (click)="handleAnimation()" alt="Toggle animation">Toggle animation</button>
+      <label id="homeLabel" class="homeLabel"><b>What are you buying today?</b></label>
+      <div class="homeMainContainer">
+        <div *ngFor='let mainCategory of mainCategoriesList'>
+          <div class="homeFlexElement" (click)="mainCategoryClick(mainCategory.id)">
+            <input class="mainCategoryInput" src="assets/{{mainCategory.name}}.jpg" type="image" />
+            <p><b>{{mainCategory.name}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isMainCategorySelected">
+      <div class="homeSubContainer">
+        <div *ngFor='let subCategory of subCategoriesList'>
+          <div class="homeFlexElement" (click)="subCategoryClick(subCategory)">
+            <input class="subCategoryInput" src="assets/{{subCategory.name}}.jpg" type="image" />
+            <p><b>{{subCategory.name}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div *ngIf="isSubCategorySelected">
+        <div class="homeSubContainer">
+          <div *ngFor='let subSubCategory of subSubCategoriesList'>
+            <div class="homeFlexElement" (click)="goToCategory(subSubCategory.name)">
+              <input class="subSubCategoryInput" src="assets/{{subSubCategory.name}}.jpg" type="image" />
+            </div>
+          </div>
+        </div>
+      </div>  
+    <p *ngIf="isLoading">Loading....</p>
+  </div>
+</div>

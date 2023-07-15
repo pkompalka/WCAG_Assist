@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+  }
+  
+.auctionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+.auctionTitle {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.auctionDescription{
+    white-space: pre-line;
+    width: 70%;
+}
+
+.auctionImageComponent { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.auctionImg { 
+    height: 40vh;
+    width: 40vh;
+}
+
+.auctionInformationComponent { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.auctionSubFlexLeft { 
+    display: flex;
+    flex-direction: column;
+}
+
+.auctionSubFlexRight { 
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.auctionPriceDiv { 
+    display: flex;
+    flex-direction: column;
+}
+
+.auctionStartDate { 
+    color: green;
+    font-size: x-large;
+}
+
+.auctionEndDate { 
+    color: red;
+    font-size: x-large;
+}
+
+.auctionPrice { 
+    color: goldenrod;
+    font-size: x-large;
+}
+
+.auctionBasicLabel { 
+    font-size: medium;
+}
+
+.auctionBuyButton { 
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    font-size: 125%;
+}
+
+.auctionReviewButton { 
+    background-color: navy;
+    color: white;
+    border-radius: 15px;
+    font-size: 125%;
+    margin-top: 12%;
+}

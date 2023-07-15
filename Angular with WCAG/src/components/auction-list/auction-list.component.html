@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="auctionList" class="auctionListContainer">
+    <title class='title' hidden={{true}}>Auction list</title>
+    <span id='alert' class="auctionListAlert" attr.aria-label="Number of auctions found: {{auctionList.length}}" (click)="closeAlert()">
+        Number of auctions found: {{auctionList.length}}.
+    </span>
+    <div *ngFor='let auction of auctionList' class="auctionListPanel" (click)="auctionClick(auction)">
+      <div class="auctionListImageComponent">
+        <img class="auctionListImg" alt="{{auction.name}}" src={{auction.image}}/>
+        <label class="auctionListTitleLabel"><b>{{auction.title}}</b></label>
+      </div>
+      <div class="auctionListTextComponent" >
+        <label aria><b>Price: {{auction.price}} PLN</b></label>
+        <label><b>{{getAuctionDate(auction.endDate)}}</b></label>
+      </div>
+    </div>
+  </div>
+</div>

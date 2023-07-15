@@ -1,0 +1,51 @@
+.registerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+}
+
+.submitContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.registerLabel{
+    margin-top: 5%;
+    width: 80%;
+}
+
+.registerInput{
+    width: 80%;
+}
+
+.registerSubmit{
+    margin-top: 2%;
+    width: 40%;
+    background-color: green;
+    border-color: white;
+}
+
+.registerHyperlink{
+    margin-top: 1%;
+}
+
+.registerCheckboxContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.registerLabel:after {
+    color: red;
+    content: ' *';
+}

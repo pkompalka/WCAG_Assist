@@ -1,0 +1,40 @@
+<div>
+  <form (ngSubmit)='onRegisterClicked()' ngNativeValidate>
+    <div class='registerContainer'>
+      <div class='flexContainer'>
+        <title class='title'>Register</title>
+        <label class="registerLabel" for="email"><b>Email:</b></label>
+        <input class="registerInput" [(ngModel)]="email" id="email" type="email" placeholder="Enter email" required/>
+        <label class="registerLabel" for="username"><b>Login:</b></label>
+        <input class="registerInput" [(ngModel)]="username" id="username" type="text" placeholder="Enter username" required/>
+        <label class="registerLabel" for="password"><b>Password:</b></label>
+        <input class="registerInput" [(ngModel)]="password" id="password" type="password" placeholder="Enter password" required/>
+        <label class="registerLabel" for="passwordRepeat"><b>Repeat Password:</b></label>
+        <input class="registerInput" [(ngModel)]="passwordRepeat" id="passwordRepeat" type="password" placeholder="Repeat password" required/>
+      </div>
+      <div class='flexContainer'>
+        <label class="registerLabel" for="nameInput"><b>Name:</b></label>
+        <input class="registerInput" [(ngModel)]="name" name="name" id="nameInput" type="text" placeholder="Enter name" required/>
+        <label class="registerLabel" for="surnameInput"><b>Surname:</b></label>
+        <input class="registerInput" [(ngModel)]="surname" name="surname" id="surnameInput" type="text" placeholder="Enter surname" required/>
+        <label class="registerLabel" for="street"><b>Street:</b></label>
+        <input class="registerInput" [(ngModel)]="street" id="street" type="text" placeholder="Enter street with flat number" required/>
+        <label class="registerLabel" for="postcode"><b>Postcode:</b></label>
+        <input class="registerInput" [(ngModel)]="postcode" id="postcode" type="text" placeholder="Enter postcode" required/>
+        <label class="registerLabel" for="city"><b>City:</b></label>
+        <input class="registerInput" [(ngModel)]="city" id="city" type="text" placeholder="Enter city" required/>
+      </div>
+    </div>
+    <div class='submitContainer'> 
+      <div class='registerCheckboxContainer'>  
+        <input type="checkbox" id="checkboxTerms" name="checkboxTerms" [(ngModel)]="checkboxState"/>
+        <label class="registerLabel" htmlFor="checkboxTerms">Do you agree to <a href="/terms" rel="noreferrer" target="_blank">Terms & Conditions</a>?</label>   
+      </div>  
+      <input class='registerSubmit' type="submit" value="Submit" alt="Submit"/>
+      <a class='registerHyperlink' href="/login">Already have an account?</a>
+      <a class='registerHyperlink' href="/">Go back to home page</a>
+      <p *ngIf="isLoading">Registering user....</p>
+      <p *ngIf="registerError != ''">{{registerError}}</p>
+    </div>
+  </form>
+</div>

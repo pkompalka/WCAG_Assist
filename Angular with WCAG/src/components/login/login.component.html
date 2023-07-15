@@ -1,0 +1,13 @@
+<div>
+  <form class='loginContainer' (ngSubmit)='onLoginClicked()' ngNativeValidate>
+    <title class='title'>Login</title>
+    <label class='loginLabel' for="loginUsername"><b>Username:</b></label>
+    <input class='loginInput' id="loginUsername" [(ngModel)]="username" placeholder='username' type="text" ngModel required />
+    <label class='loginLabel' for="loginPassword"><b>Password:</b></label>
+    <input class='loginInput' id="loginPassword" [(ngModel)]="password" placeholder='password' type="password" required />
+    <input class='loginSubmit' type="submit" value="Submit" alt="Submit" />
+    <a class='loginHyperlink' href="/register">Click to create account</a>
+    <p *ngIf="isLoading">Logging user....</p>
+    <p *ngIf="registerError != ''">{{registerError}}</p>
+  </form>
+</div>

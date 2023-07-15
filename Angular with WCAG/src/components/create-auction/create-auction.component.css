@@ -1,0 +1,63 @@
+.createContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createLabel{
+    margin-top: 1%;
+    width: 54.5%;
+    display: inline-block;
+}
+
+.createTextArea{
+    margin-top: 1%;
+    width: 54.5%;
+}
+
+.createInput{
+    width: 54.5%;
+}
+
+.createSelect{
+    width: 54.5%;
+}
+
+.createSubmit{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 40%;
+}
+
+.createHiddenDiv {
+    display: none;
+}
+      
+.createPictureLabel:hover + .createHiddenDiv {
+    display: block;
+    background-color: white;
+    color: #4d0303;
+    content: ' *';
+}
+
+.createHiddenDiv:hover {
+    display: block;
+    background-color: white;
+    color: #4d0303;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 54.5%;
+}
+
+.createRangeInput{
+    width: 54.5%;
+}
+
+.createLabel:after {
+    color: red;
+    content: ' *';
+}

@@ -1,0 +1,54 @@
+.auctionListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auctionListPanel { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-style: solid;
+    width: 90%;
+    background-color: antiquewhite;
+    height: 20vh;
+    cursor: pointer;
+}
+
+.auctionListImg { 
+    height: 18vh;
+    width: 18vh;
+    border-radius: 50%;
+    border: 10px;
+}
+
+.auctionListTitleLabel { 
+    margin-left: 20px;
+}
+
+.auctionListTextComponent { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.auctionListAlert {
+    margin-top: 1%;
+    background-color: yellow;
+    color: black;
+    width: 90%;
+    cursor: pointer;
+    height: 4vh;
+    text-align: center;
+    font-size: large;
+}

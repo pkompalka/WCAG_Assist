@@ -1,0 +1,12 @@
+<div>
+  <form class='loginContainer' (ngSubmit)='onLoginClicked()'>
+    <img src="assets/login.jpg"/>
+    <div id='usernameDiv' class='loginLabel' contenteditable="true" name="username" [(ngModel)]="username">Username</div>
+    <label class='loginLabel'><b>Password:</b></label>
+    <input class='loginInput' name="password" [(ngModel)]="password" placeholder='password' type="password" />
+    <input class='loginSubmit' type="submit" value="Submit" />
+    <a accesskey="q" class='loginHyperlink' href="/register">Click to create account</a>
+    <p *ngIf="isLoading">Logging user....</p>
+    <p *ngIf="registerError != ''">{{registerError}}</p>
+  </form>
+</div>

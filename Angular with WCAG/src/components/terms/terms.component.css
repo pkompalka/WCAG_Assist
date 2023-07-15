@@ -1,0 +1,18 @@
+.termsButton {
+    color: #FFFFFF;
+    background-color:#000000;
+}
+
+.termsButton:hover {
+    background-color: #545454;
+}
+
+.termsFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.termsText {
+    line-height: 100%;
+    height: auto;
+}

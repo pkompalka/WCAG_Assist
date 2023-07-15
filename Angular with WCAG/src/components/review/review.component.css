@@ -1,0 +1,42 @@
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewLabel {
+    margin-top: 2%;
+    font-size: x-large;
+}
+
+.mediaElement {
+    width: 70%;
+}
+
+.test {
+    white-space: break-spaces;
+    width: 70%;
+}
+
+div {
+    white-space: pre-wrap;
+}
+
+.goBackButton { 
+    background-color: #4d0303;
+    color: white;
+    border-radius: 15px;
+    font-size: 125%;
+}
+
+.reviewAlert {
+    margin-top: 1%;
+    background-color: yellow;
+    color: black;
+    width: 90%;
+    cursor: pointer;
+    height: auto;
+    text-align: center;
+    font-size: large;
+}

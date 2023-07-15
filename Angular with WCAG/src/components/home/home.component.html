@@ -1,0 +1,39 @@
+<div>
+  <div>
+    <div *ngIf="categoriesList">
+      <title class='title' hidden={{true}}>Home</title>      
+      <button id="animationButton" (click)="onNotificationClick()" attr.alt="{{notificationsStatus}}">{{notificationsStatus}}</button>
+      <button id="animationButton" (click)="handleAnimation()" alt="Toggle animation">Toggle animation</button>
+      <label id="homeLabel" class="homeLabel"><b>What are you buying today?</b></label>
+      <div class="homeMainContainer">
+        <div *ngFor='let mainCategory of mainCategoriesList'>
+          <div class="homeFlexElement" (click)="mainCategoryClick(mainCategory.id)">
+            <input class="mainCategoryInput" alt="Image of {{mainCategory.name}}" src="assets/{{mainCategory.name}}.jpg" type="image" />
+            <p><b>{{mainCategory.name}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isMainCategorySelected">
+      <div class="homeSubContainer">
+        <div *ngFor='let subCategory of subCategoriesList'>
+          <div class="homeFlexElement" (click)="subCategoryClick(subCategory)">
+            <input class="subCategoryInput" alt="Image of {{subCategory.name}}" src="assets/{{subCategory.name}}.jpg" type="image" />
+            <p><b>{{subCategory.name}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div *ngIf="isSubCategorySelected">
+        <div class="homeSubContainer">
+          <div *ngFor='let subSubCategory of subSubCategoriesList'>
+            <div class="homeFlexElement" (click)="goToCategory(subSubCategory.name)">
+              <input class="subSubCategoryInput" alt="Image of {{subSubCategory.name}}" src="assets/{{subSubCategory.name}}.jpg" type="image" />
+              <p><b>{{subSubCategory.name}}</b></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    <b *ngIf="isLoading">Loading....</b>
+  </div>
+</div>

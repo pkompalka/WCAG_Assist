@@ -1,0 +1,40 @@
+<div>
+  <form (ngSubmit)='onCreateClicked()' ngNativeValidate>
+    <div class='createContainer'>
+      <title class='title'>Create auction</title>
+      <label class='createLabel' for="title"><b>Title:</b></label>
+      <input class='createInput' id="title" type="text" [(ngModel)]="title" placeholder='Auction title' required />
+      <label class='createLabel' for="description"><b>Description:</b></label>
+      <textarea class="createTextArea" id="description" [(ngModel)]="description" rows="10" placeholder='Add auction description' required></textarea>
+      <label class='createLabel' for="price"><b>Price for one item:</b></label>
+      <input class='createInput' id="price" [(ngModel)]="price" type="number" step="0.01" min="1" placeholder='Set price' required />
+      <label class='createLabel' for="rangeInput"><b>Quantity:</b></label>
+      <input class='createRangeInput' name="quantity" [(ngModel)]="quantity" id="rangeInput" type="range" min="1" max="40"/>
+      <output id="rangeOutput">{{quantity}}</output>
+      <label class='createLabel' for="date"><b>Auction end date and time:</b></label>
+      <input class='createInput' id="date" [(ngModel)]="date" type="datetime-local" required />
+      <label class='createLabel'><b>Select category:</b></label>
+      <div *ngIf="categoriesList" class='createInput'>
+        <select class="createSelect" (change)='onSelectOptionChanged($event)'>
+          <optgroup *ngFor='let masterCategory of masterCategoriesList' label="{{masterCategory.name}}">
+            <option *ngFor="let subCategory of getSubCategories(masterCategory.id)">{{subCategory.name}}</option>
+          </optgroup>
+        </select>
+      </div>
+      <div *ngIf="subSubCategoriesList" class='createInput'>
+        <div *ngFor='let subSubCategory of subSubCategoriesList' class='createLabel'>
+          <input type="radio" id="subcategoryRadio" class='createLabel' value={{subSubCategory.name}} (change)='onSubCategoryChanged($event)' required />
+          <label for="subcategoryRadio"><b>{{subSubCategory.name}}</b></label>
+        </div>
+      </div>
+      <div class='flexRow'>
+        <label class='createPictureLabel' for="fileInput"><b>Auction picture:</b></label>
+        <div class='createHiddenDiv'>Add only one picture</div>
+      </div>
+      <input class='createInput' type="file" id="fileInput" (change)='onImageChanged($event)' required />
+      <input class='createSubmit' type="submit" value="Submit" alt="Submit" />
+      <p *ngIf="isLoading">Creating auction....</p>
+      <p *ngIf="createError != ''">{{createError}}</p>
+    </div>
+  </form>
+</div>

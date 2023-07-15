@@ -1,0 +1,52 @@
+.loginContainer {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    height: 40%;
+    margin-top: -15%;
+    width: 30%;
+    margin-left: -15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginLabel{
+    margin-top: 5%;
+    width: 80%;
+}
+
+.loginInput{
+    width: 80%;
+}
+
+.loginSubmit{
+    margin-top: 5%;
+    width: 40%;
+}
+
+.loginHyperlink{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.loginHyperlink{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.title{
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+b {
+    animation-name: loginLabelAnimation;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loginLabelAnimation {
+    0%   {background-color: yellow;}
+    100%  {background-color: red;}
+}
